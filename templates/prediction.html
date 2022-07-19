@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en"><!-- Basic -->
+<head>
+	<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+    <!-- Mobile Metas -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+     <!-- Site Metas -->
+    <title>Disease Gene Lab</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Site Icons -->
+    <link rel="shortcut icon" href="images/favicon.ico" type="image/x-icon">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.png">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/bootstrap.min.css')}}">
+    <!-- Pogo Slider CSS -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/pogo-slider.min.css')}}">
+	<!-- Site CSS -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+    <!-- Responsive CSS -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/responsive.css')}}">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="{{url_for('static',filename='css/custom.css')}}">
+
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+      <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+</head>
+<body id="home" data-spy="scroll" data-target="#navbar-wd" data-offset="98">
+
+
+	<!-- Start top bar -->
+	<div class="main-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-lg-6">
+					<div class="left-top">
+
+
+					</div>
+				</div>
+				<div class="col-lg-6">
+					<div class="wel-nots">
+						<p>Welcome to Our Disease Gene Lab!</p>
+					</div>
+
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- End top bar -->
+
+	<!-- Start header -->
+	<header class="top-header">
+		<nav class="navbar header-nav navbar-expand-lg">
+            <div class="container">
+				<a class="navbar-brand" href="index.html"><img src="{{url_for('static',filename='images/logo.png')}}" alt="image"></a>
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-wd" aria-controls="navbar-wd" aria-expanded="false" aria-label="Toggle navigation">
+					<span></span>
+					<span></span>
+					<span></span>
+				</button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbar-wd">
+                    <ul class="navbar-nav">
+                        <li><a class="nav-link active" href="{{url_for('index')}}">Home</a></li>
+                        <li><a class="nav-link" href="{{url_for('about')}}">About Us</a></li>
+                        <li><a class="nav-link" href="{{url_for('training')}}">Training</a></li>
+						<li><a class="nav-link" href="{{url_for('prediction')}}">Prediction</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+	</header>
+
+
+              <br><u><center><h2><b>
+                ***Please Enter The Parameters Below to Find Out The Prediction of Type of Disease***
+    </b>
+    </h2>
+    </center>
+    </u>
+
+
+<center>
+      <form action="{{url_for('prediction')}}" method="POST">
+
+          <b>{{ msg|safe }}</b>
+          <br><br>
+
+           <div class="col-md-3 form-group">
+
+               <b><label>GeneId</label></b>
+               <input name="geneId" type="float" placeholder="geneId" class="form-control">
+
+
+               <b><label>DSI</label></b>
+               <input name="DSI" type="float" placeholder="DSI"  class="form-control">
+
+
+               <b><label>DPI</label></b>
+               <input name="DPI" type="float" placeholder="DPI"  class="form-control">
+
+
+               <b><label>Score</label></b>
+               <input name="score" type="float" placeholder="score"  class="form-control">
+
+
+               <b><label>YearInitial</label></b>
+               <input name="YearInitial" type="float" placeholder="YearInitial"  class="form-control">
+
+
+               <b><label>YearFinal</label></b>
+               <input name="YearFinal" type="float" placeholder="YearFinal"  class="form-control">
+
+
+               <b><label>NofPmids</label></b>
+               <input name="NofPmids" type="float" placeholder="NofPmids"  class="form-control">
+
+
+			   <b><label>GeneSymbol</label></b>
+               <input name="geneSymbol" type="float" placeholder="geneSymbol"  class="form-control">
+
+
+			   <b><label>Disease Id</label></b>
+               <input name="diseaseId" type="float" placeholder="diseaseId"  class="form-control">
+
+
+			   <b><label>Disease Name</label></b>
+               <input name="diseaseName" type="float" placeholder="diseaseName"  class="form-control">
+
+
+			   <b><label>Disease Class</label></b>
+               <input name="diseaseClass" type="float" placeholder="diseaseClass"  class="form-control">
+
+
+			   <b><label>Disease Semantic Type</label></b>
+               <input name="diseaseSemanticType" type="float" placeholder="diseaseSemanticType"  class="form-control">
+
+
+			   <b><label>Source</label></b>
+               <input name="source" type="float" placeholder="source"  class="form-control">
+               <br>
+
+               <div class="col-md-4">
+                  <input type="submit" class="btn btn-primary" value="submit" style=" 180px;margin-right: 10px;">
+              </div>
+
+
+           </div>
+
+
+
+
+      </form>
+    </center>
+  </div>
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+
+
+
+</body>
+
+</html>
